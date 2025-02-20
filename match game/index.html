@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="landing">
+        <h1>Memory Match Game</h1> <br> <button id="settings-btn" text-align=" top-right">⚙️ Settings</button>
+        <br>
+        <button class="category" data-category="fruits">🍎 Fruits</button>
+        <button class="category" data-category="animals">🐶 Animals</button>
+        <button class="category" data-category="emojis">😀 Emojis</button>
+        <button class="category" data-category="planets">🪐 Planets</button>
+        <button class="category" data-category="shapes">🔺 Shapes</button>
+        <button class="category" data-category="flags">🏁 Flags</button>
+        <button class="category" data-category="landmarks">🏛️ Landmarks</button>
+        <button class="category" data-category="food">🍕 Food</button>
+<button class="category" data-category="nature">🌳 Nature</button>
+<button class="category" data-category="transportation">🚗 Transportation</button>
+<button class="category" data-category="sports">⚽ Sports</button>
+<button class="category" data-category="occupations">👨‍⚕️ Occupations</button>
+<button class="category" data-category="seasonal">🎄 Seasonal</button>
+<button class="category" data-category="space">🚀 Space</button>
+<button class="category" data-category="household">🪑 Household</button>
+<button class="category" data-category="music">🎸 Music</button>
+<button class="category" data-category="fantasy">🐉 Fantasy</button>
+<button class="category" data-category="vehicles">🚗 Vehicles</button>
+<button class="category" data-category="insects">🦋 Insects</button>
+<button class="category" data-category="clothing">🧢 Clothing</button>
+<button class="category" data-category="holidays">🎃 Holidays</button>
+<button class="category" data-category="dinosaurs">🦖 Dinosaurs</button>
+<button class="category" data-category="ocean">🐠 Ocean</button>
+<button class="category" data-category="tools">🔨 Tools</button>
+<button class="category" data-category="cartoons">🐭 Cartoons</button>
+       
+    </div>
+
+    <div id="game" class="hidden">
+        <h2 id="category-title"></h2>
+        <p id="timer">Time: 60s</p>
+        <p id="score">Score: 0</p>
+        <div id="grid"></div>
+    </div>
+
+    <div id="game-over-overlay" class="hidden">
+        <p id="game-over-message"></p>
+        <p id="high-score">High Score: 0</p>
+        <button id="restart-overlay">Restart</button>
+        <button id="menu-overlay">Menu</button>
+    </div>
+
+    <div id="settings" class="hidden">
+        <h2>Settings</h2>
+        <label for="timer-input">Timer (seconds):</label>
+        <input type="number" id="timer-input" min="10" max="300" value="60">
+        <label for="sound">Sound:</label>
+        <select id="sound">
+            <option value="on">On</option>
+            <option value="off">Off</option>
+        </select>
+        <label for="dark-mode">Dark Mode:</label>
+        <select id="dark-mode">
+            <option value="on">On</option>
+            <option value="off">Off</option>
+        </select>
+        <button id="apply-settings">Apply</button>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="sounds/bg.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="flip-sound">
+        <source src="sounds/flip.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="win-sound">
+        <source src="sounds/win.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="lose-sound">
+        <source src="sounds/lose.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
